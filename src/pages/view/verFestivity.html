@@ -1,0 +1,25 @@
+<ion-header>
+      <ion-navbar>
+        <ion-title>
+          Festivity
+        </ion-title>
+      </ion-navbar>
+</ion-header>
+<ion-content padding>
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/thumbnail-totoro.png">
+        </ion-thumbnail>
+        <h2>{{festivity.name}}</h2>        
+        <h5>{{festivity.place}}</h5>
+        <p>Start: {{festivity.start | date }}</p>
+        <p>End: {{festivity.end | date }}</p>
+
+    <ion-fab middle center>
+        <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+        <ion-fab-list side="down">
+        <button (tap) = "updateFestivity(festivity)" ion-fab><ion-icon name="brush"></ion-icon></button>        
+        <button block (click) = "removeFestivity(festivity)" ion-fab><ion-icon name="trash"></ion-icon></button>        
+        </ion-fab-list>
+    </ion-fab>
+ </ion-content>       
+    

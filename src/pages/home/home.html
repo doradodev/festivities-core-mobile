@@ -1,0 +1,20 @@
+<ion-header>
+      <ion-navbar>
+        <ion-title>
+          Festivities
+        </ion-title>        
+      </ion-navbar>
+</ion-header>
+<ion-content>
+<ion-list no-lines>
+  <ion-item *ngFor="let item of festivities">    
+    <h2>{{item.name}}</h2>
+    <p>{{item.place}}</p>
+    <button (tap)="verFestivity(item)" ion-button clear item-right>View</button>
+    <!--button (tap)="verFestivity(item)" ion-button clear item-right><ion-icon name="add-circle"></ion-icon></button-->
+  </ion-item>
+</ion-list>
+<ion-fab bottom center>
+    <button (tap) = "createFestivity()" ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+</ion-fab >
+</ion-content>
